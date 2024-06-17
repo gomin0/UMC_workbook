@@ -1,4 +1,4 @@
-package umc.workbook.web.dto;
+package umc.workbook.web.dto.TempDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
