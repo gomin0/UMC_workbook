@@ -2,6 +2,7 @@ package umc.workbook.service.StoreService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import umc.workbook.apiPayload.code.status.ErrorStatus;
 import umc.workbook.apiPayload.exception.handler.RegionHandler;
 import umc.workbook.converter.StoreConverter;
@@ -12,6 +13,7 @@ import umc.workbook.repository.StoreRepository;
 import umc.workbook.web.dto.StoreDTO.StoreRequestDTO;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class StoreCommandServiceImpl implements StoreCommandService {
 

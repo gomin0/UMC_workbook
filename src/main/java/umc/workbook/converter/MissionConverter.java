@@ -2,6 +2,7 @@ package umc.workbook.converter;
 
 import umc.workbook.domain.Mission;
 import umc.workbook.domain.Store;
+import umc.workbook.domain.mapping.MemberMission;
 import umc.workbook.web.dto.MissionDTO.MissionRequestDTO;
 import umc.workbook.web.dto.MissionDTO.MissionResponseDTO;
 
@@ -13,6 +14,14 @@ public class MissionConverter {
         return MissionResponseDTO.JoinResultDTO.builder()
                 .missionId(mission.getId())
                 .storeId(mission.getStore().getId())
+                .createdAt(LocalDateTime.now())
+                .build();
+    }
+
+    public static MissionResponseDTO.JoinResultDTO toJoinResultDTO(MemberMission mission) {
+        return MissionResponseDTO.JoinResultDTO.builder()
+                .missionId(mission.getId())
+                .storeId(mission.getMission().getStore().getId())
                 .createdAt(LocalDateTime.now())
                 .build();
     }

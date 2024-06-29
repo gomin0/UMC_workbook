@@ -25,6 +25,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class MemberCommandServiceImpl implements MemberCommandService {
 
     private final MemberRepository memberRepository;
