@@ -13,7 +13,6 @@ import umc.workbook.domain.Review;
 import umc.workbook.domain.enums.MissionStatus;
 import umc.workbook.repository.MemberMissionRepository;
 import umc.workbook.repository.MemberRepository;
-import umc.workbook.repository.MissionRepository;
 import umc.workbook.repository.ReviewRepository;
 
 @Service
