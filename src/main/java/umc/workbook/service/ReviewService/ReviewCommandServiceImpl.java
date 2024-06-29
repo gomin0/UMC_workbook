@@ -2,6 +2,7 @@ package umc.workbook.service.ReviewService;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import umc.workbook.apiPayload.code.status.ErrorStatus;
 import umc.workbook.apiPayload.exception.handler.StoreHandler;
 import umc.workbook.apiPayload.exception.handler.MemberHandler;
@@ -15,6 +16,7 @@ import umc.workbook.repository.StoreRepository;
 import umc.workbook.web.dto.ReviewDTO.ReviewRequestDTO;
 
 @Service
+@Transactional
 @RequiredArgsConstructor
 public class ReviewCommandServiceImpl implements ReviewCommandService {
 
